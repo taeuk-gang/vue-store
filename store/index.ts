@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import * as list from './modules/list.ts';
 
 Vue.use(Vuex);
 
@@ -9,11 +10,11 @@ const store = new Vuex.Store({
   },
   mutations: {
     increment(state) {
-      state.count++;
+      state.count++
     }
   }
-});
+})
 
-store.commit('increment');
+store.commit(`increment`)
 
-console.log(store.state.count);
+console.log(store.state.count)
